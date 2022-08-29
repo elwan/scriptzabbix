@@ -88,7 +88,7 @@ services:
     depends_on:
       - zabbix-server
     ports:
-      - "162:1162/udp"
+      - "162:1162/udp" #port number for snmp
     volumes: #The volume contains log file snmptraps.log named with received SNMP traps.
       - snmptraps:/var/lib/zabbix/snmptraps:rw
       - snmpmibs:/var/lib/zabbix/mibs:rw
