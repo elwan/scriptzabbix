@@ -103,7 +103,7 @@ services:
   #image: monitoringartist/grafana-xxl:latest
     image: grafana/grafana-oss
     container_name: grafana
-    user: "0:0"
+    user: "0:0" # give root permission 
     restart: unless-stopped
     depends_on:
       - zabbix-web
